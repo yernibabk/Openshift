@@ -106,4 +106,51 @@ cmd help:
 How does docker is working?
 -> it works on kernell namespace
 
+To connect container from localhost:
+> docker run -it ubuntu
+
+To run container in background:
+[root@localhost ~]# docker run -it -d ubuntu
+6e0697841ff5ac51df6b1f6550ff7deeb5cca89eaf7dfa007af7a367c674c8b1
+[root@localhost ~]# docker attach 6e0697841ff5ac51df6b1f6550ff7deeb5cca89eaf7dfa007af7a367c674c8b1
+
+To find the projects:
+> oc get projects
+
+To find events:
+> oc get events
+
+To create project created in cluster:
+> oc new-project production
+
+In side production, if you want to run the application:
+> oc new-app centos/ruby..
+
+To check logs:
+> oc logs -f bc/ruby-ex
+
+To list of pods in openshift:
+> oc get pods
+
+> oc describe pods pods_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
