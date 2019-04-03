@@ -97,5 +97,13 @@ To verify:
 from ubuntu to check whether it is connected to ubuntu or not:
 > apt-get update
 
+To check the available containers cmd:
+> docker container ls
+
+cmd help:
+> docker container cf
+
+How does docker is working?
+-> it works on kernell namespace
 
 
