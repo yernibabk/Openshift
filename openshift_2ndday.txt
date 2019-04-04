@@ -99,6 +99,12 @@ Start or restart Docker.
     # systemctl start docker
     # systemctl is-active docker
  
+ Ansible inventory file location:
+ [root@babu openshift-ansible]# vi /etc/ansible/hosts
+update the host file with master and node and security info.
+
+> [root@babu playbooks]# ansible-playbook -i /etc/ansible/hosts prerequisites.yml
+[root@babu playbooks]# ansible-playbook -i /etc/ansible/hosts deploy_cluster.yml
 
 
 
