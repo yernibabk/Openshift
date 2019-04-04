@@ -50,7 +50,20 @@ To update the packages for centos:
 > yum update
 
 
+[root@babu ~]# ssh 192.168.122.5
+[root@babu ~]# ssh-keygen
+press enter 3 times
+ssh key generated.
 
+Send the generated ssh key to different nodes/hosts
+
+[root@babu ~]# ssh-copy-id babu.example.com
+
+[root@babu ~]# ssh babu.example.com
+
+Install the base package for openshift:
+
+[root@babu ~]# yum install -y wget git net-tools bind-utils yum-utils iptables-services bridge-utils bash-completion kexec-utils sos psacct 
 
 
 
