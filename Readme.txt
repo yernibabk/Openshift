@@ -1,3 +1,23 @@
+Docker:
+Docker is a container management service.
+
+Docker Engine − It is used for building Docker images and creating Docker containers.
+
+Docker Hub − This is the registry which is used to host various Docker images.
+
+Docker Compose − This is used to define applications using multiple Docker containers.
+
+In Docker, everything is based on Images. An image is a combination of a file system and parameters.
+
+> docker run hello-world 
+
+    The Docker command is specific and tells the Docker program on the Operating System that something needs to be done.
+
+    The run command is used to mention that we want to create an instance of an image, which is then called a container.
+
+    Finally, "hello-world" represents the image from which the container is made.
+
+
 Openshift:
 it is part of PAAS, and hybrid cluod.
 
