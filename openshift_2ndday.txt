@@ -1,1 +1,63 @@
 
+Docker uninstallation cmd:
+
+> yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+                 
+                 
+                 
+Reference: https://docs.docker.com/install/linux/docker-ee/centos/
+
+[root@localhost ~]# yum list install | grep docker
+
+[root@localhost ~]# yum remove containerd.io.x86_64
+
+
+Installation of openshift:
+
+
+hostname:
+[root@localhost ~]# hostname
+localhost.localdomain
+
+setup hostname:
+[root@localhost ~]# hostnamectl set-hostname babu.example.com
+
+verify:
+[root@localhost ~]# ping babu.example.com
+
+
+This howto guide shows you’ll how to enable EPEL repository under RHEL/CentOS 6/5 to install additional standard open source packages by using YUM command.
+
+To listout packages:
+> [root@localhost ~]# yum repolist
+
+Downloading additional package for cloud:
+
+## RHEL/CentOS 7 64-Bit ##
+> wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+> rpm -ivh epel-release-latest-7.noarch.rpm
+
+To update the packages for centos:
+> yum update
+
+
+
+
+
+
+
+
+
+
+
+
+
