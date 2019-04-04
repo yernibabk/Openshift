@@ -61,9 +61,44 @@ Send the generated ssh key to different nodes/hosts
 
 [root@babu ~]# ssh babu.example.com
 
-Install the base package for openshift:
+  Install the following base packages:
 
-[root@babu ~]# yum install -y wget git net-tools bind-utils yum-utils iptables-services bridge-utils bash-completion kexec-utils sos psacct 
+    # yum install  -y wget git net-tools bind-utils yum-utils iptables-services bridge-utils bash-completion kexec-tools sos psacct
+    
+epel update:
+
+[root@babu ~]# yum -y install                     https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  
+ etcdctl -> to connect master node to execute cmds
+
+Disable the EPEL repository globally so that it is not accidentally used during later steps of the installation:
+
+                # sed -i -e "s/^enabled=1/enabled=0/" /etc/yum.repos.d/epel.repo
+
+Install the packages for Ansible:
+
+                # yum -y --enablerepo=epel install ansible pyOpenSSL
+                
+remove docker: [if you have any issue/errors]
+[root@babu openshift-ansible]# yum remove docker*
+
+Install Docker 1.13:
+
+    # yum install docker-1.13.1
+
+    Verify that version 1.13 was installed:
+
+    # rpm -V docker-1.13.1
+    # docker version
+
+Start or restart Docker.
+
+    If Docker has never run on the host, enable and start the service, then verify that it is running:
+
+    # systemctl enable docker
+    # systemctl start docker
+    # systemctl is-active docker
+ 
 
 
 
