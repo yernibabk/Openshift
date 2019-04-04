@@ -106,6 +106,71 @@ update the host file with master and node and security info.
 > [root@babu playbooks]# ansible-playbook -i /etc/ansible/hosts prerequisites.yml
 [root@babu playbooks]# ansible-playbook -i /etc/ansible/hosts deploy_cluster.yml
 
+to check nodes in openshift environment
+
+> oc get nodes
+
+To check available projects
+> oc get projects
+
+To check the user in cluster environment
+>oc whoami
+
+To create testing project
+>oc new-project testing
+
+to create new user in openshift environment
+>oc create user jack
+
+To check the list of users
+>oc get users
+
+To create password
+>htpasswd
+
+file loc: /etc/origin
+
+>htpasswd -h   => for Help
+
+>htpasswd -b htpasswd jack jack
+
+Login with jack user:
+>oc login -u jack -p jack
+
+cluster admin previlage to jack user
+>oc adm policy add-cluster-role-to-user cluster:admin jack 
+
+To remove cluster admin previlage to jack user
+>oc adm policy remove-cluster-role-to-user cluster:admin jack
+
+How to connect container in the POD:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
