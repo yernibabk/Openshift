@@ -1,3 +1,5 @@
+Trainer email id: rushil1234@gmail.com
+
 
 > To resolve host entry ( Here using other system) 
 [root@babu home]# vi /etc/hosts
@@ -21,6 +23,8 @@ trouble shooting for network issue(trying to connect...)
 > systemctl stop dbus
 > systemctl start dbus
 > systemctl restart dnsmasq.service
+
+
 
 
 
