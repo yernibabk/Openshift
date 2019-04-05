@@ -3,4 +3,28 @@
 [root@babu home]# vi /etc/hosts
 
 192.168.1.33 sandeep.example.com
+192.168.1.31 devilman.example.com
+
+DO ssh user working system:
+> ssh 192.168.1.31
+
+create user:
+[root@devilman ~]# oc create user babu
+
+[root@devilman ~]# htpasswd -b /etc/origin/master/htpasswd babu centos
+
+Here babu -> username, centos -> password
+
+access url: https://devilman.example.com:8443/console/catalog
+
+trouble shooting for network issue(trying to connect...)
+> systemctl stop dbus
+> systemctl start dbus
+> systemctl restart dnsmasq.service
+
+
+
+
+
+
 
