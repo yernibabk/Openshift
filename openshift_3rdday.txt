@@ -1,5 +1,5 @@
 Trainer email id: rushil1234@gmail.com
-
+ph: 9024027165
 
 > To resolve host entry ( Here using other system) 
 [root@babu home]# vi /etc/hosts
